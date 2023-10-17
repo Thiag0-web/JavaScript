@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Você mora em qual país?</h1>
+    <form>
+        pais: <input type="text" name="text" id="itxt">
+        <input type="button" value="verificar" onclick="verifica()">
+    </form>
+    <div id="ver"></div>
+    <script>
+        function verifica(){
+            var txt = window.document.getElementById('itxt')
+            var ver = window.document.getElementById('ver')
+            var pais = txt.value.toLowerCase();
+            if (pais == "brasil"){
+                ver.innerHTML += `<p>Você é brasileiro!!!</p>`    
+            }
+            else{
+                ver.innerHTML += `Você é estranjeiro!!</p>`
+            }
+        } 
+    </script>
+</body>
+</html>
